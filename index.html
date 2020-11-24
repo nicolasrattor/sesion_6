@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Capacitación en R y herramientas de productividad</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="" />
+    <meta name="date" content="2020-11-24" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: center, middle
+
+.linea-superior[]
+.linea-inferior[]
+
+
+&lt;img src="imagenes/logo_portada2.png" width="200" /&gt;
+
+
+## Capacitación en R y herramientas de productividad
+
+## Proyecto Estratégico Servicios Compartidos para la Producción Estadística
+
+## Introducción a Rmarkdown
+
+### Octubre 2020
+
+
+
+
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Sesión 8: Introducción a RMarkdown
+
+--
+&lt;br/&gt;
+
+.medium-par[Importancia de la reproducibilidad 🤖]
+&lt;br/&gt;
+&lt;br/&gt;
+
+--
+
+.medium-par[¿Qué es RMarkdown?]
+&lt;br/&gt;
+&lt;br/&gt;
+
+--
+
+.medium-par[Tipos de formatos de salida]
+&lt;br/&gt;
+&lt;br/&gt;
+
+--
+
+.medium-par[Creando mi primer reporte con RMarkdown]
+&lt;br/&gt;
+&lt;br/&gt;
+
+---
+
+background-image: url(https://the-turing-way.netlify.app/_images/reproducibility.jpg)
+background-size: contain
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Importancia de la reproducibilidad
+
+--
+&lt;br/&gt;
+
+.center[.medium-par[¿Han escuchado el concepto de .pur[reproducibilidad]?🤔]]
+
+--
+
+.center[.big-par[¿Qué entienden por .pur[reproducibilidad]?]]
+
+--
+
+.center[.medium-par[¿En qué creen que puede aportar la .pur[reproducibilidad] en su trabajo cotidiano]?]
+
+--
+
+.center[.big-par[🤔]]
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Importancia de la reproducibilidad
+
+--
+&lt;br/&gt;
+
+Otra persona (o mi yo del futuro) puede ejecutar mi .pur[código] con .pur[los mismos datos] llegando **al mismo resultado**.
+
+--
+&lt;br/&gt;
+&lt;br/&gt;
+
+.center[.big-par[**¿Qué puede salir mal?** ⚰️]]
+
+--
+&lt;br/&gt;
+
+.center[
+&lt;img src= "https://media1.giphy.com/media/jM6JLt7xHkZxaeHwhG/200w.webp?cid=ecf05e478x4ytanztrx22si2y7ibrgekn371tgscimf4bemf&amp;rid=200w.webp" width="400"/&gt;
+]
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Importancia de la reproducibilidad
+
+--
+&lt;br/&gt;
+&lt;br/&gt;
+
+
+.pull-left[
+&lt;br/&gt;
+&lt;br/&gt;
+
+&lt;img src = "https://media4.giphy.com/media/Q6rHMQaNbqsqBd8pVb/200w.webp?cid=ecf05e47coe8546mt2qzg63trkm1qmlbgzgt5kt10krdzvv5&amp;rid=200w.webp" width="400" /&gt;]
+
+--
+
+.pull-right[
+
+- Diferentes versiones del *software* o de los paquetes.
+
+- No sé si estoy usando los mismos datos.
+
+- Rutas a archivos que son incorrectas.
+
+- Aleatoriedad no reproducible.
+
+- Variables no localizadas (no estaban creadas en la rutina)
+
+- Comentarios escuetos en el código
+
+]
+
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Importancia de la reproducibilidad
+
+--
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+
+&lt;img src =https://www.researchgate.net/profile/Arthur_Piazzi/publication/325910795/figure/fig2/AS:640119719620611@1529627842920/Reproducibility-Spectrum.png width="800"/&gt;
+
+---
+
+background-image: url(https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/rmarkdown_wizards.png)
+background-size: contain
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# R Markdown
+
+--
+
+`R Markdown` .pur[provee de un marco] para generar documentos en el contexto del análisis de datos. En un único documento de `R Markdown` podemos:
+
+--
+
+.pull-left[
+Guardar y ejecutar código.
+
+Generar reportes de alta calidad que pueden ser compartidos fácilmente.
+
+Los documentos creados con `R Markdown` son completamente reproducibles.
+
+Generar presentaciones con **código** y **tablas**, **imágenes**, etc. (como las de este curso).
+]
+
+.pull-right[
+![](https://www.rstudio.com/wp-content/uploads/2017/05/rmarkdown.png)
+]
+
+---
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# R Markdown
+
+--
+
+## Cómo funciona
+
+Los archivos de `R Markdown` en general tienen 3 partes:
+
+--
+
+- Un encabezado que permite configurar inicialmente el documento que vamos a escribir (**yaml**)
+
+
+![](https://smac-group.github.io/ds/images/rmd_yaml.png)
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# R Markdown
+
+--
+
+## Cómo funciona
+
+Los archivos de `R Markdown` en general tienen 3 tipos de contenido:
+
+- "Pedazos de código" (o en inglés, *chunk codes*).
+
+![](https://smac-group.github.io/ds/images/rmd_code_chunk.png)
+
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# R Markdown
+
+--
+
+## Cómo funciona
+
+Los archivos de `R Markdown` en general tienen 3 partes:
+
+--
+
+- los cuerpos de texto donde podemos hacer comentarios sin necesidad de usar "#"
+
+
+![](imagenes/rmd_text.PNG)
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# R Markdown
+
+--
+
+## Cómo funciona
+
+Los archivos de `R Markdown` en general tienen 3 tipos de contenido:
+
+- Texto con formato de texto simple (ej. como un documento en Word, etc.)
+
+Para generar el documento se puede utilizar el comando `render` o bien utilizar el botón `Knit` (Tejer).
+
+.center[
+
+![](https://d33wubrfki0l68.cloudfront.net/eb48bae40b24285c0c8f281e6d2a7500cf3b9fc8/a2e5f/knitr/images/knit-logo.png)
+]
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# R Markdown
+
+--
+
+## Cómo funciona
+
+.middle[
+![](https://d33wubrfki0l68.cloudfront.net/61d189fd9cdf955058415d3e1b28dd60e1bd7c9b/b739c/lesson-images/rmarkdownflow.png)
+]
+
+--
+
+`R Markdown` ofrece muchas posibilidades. Veremos mayormente cómo crear documentos en formato .pdf usando `R Markdown`, donde se puede incrustar código en `\(\LaTeX\)`.
+
+--
+
+Una de las principales **desventajas** de RMarkdown es que toma bastante **tiempo**⏰🕰️ hacer un documento la primera vez que se usa.
+
+--
+
+Y generalmente hay que **estudiar** un poco con google para que nuestros documentos resulten tal y como los imaginamos.
+
+--
+
+`\(\LaTeX\)` es un sistema de composición de textos orientado a la creación de documentos científicos.
+
+--
+
+`\(\LaTeX\)` es muy útil para escribir textos que incluyen notación matemática.
+
+--
+
+`R Markdown` cuenta con varias herramientas que nos permiten eximirnos un poco del conocimiento de `\(\LaTeX\)` ⏩⏩⏩
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Ahora manos a la obra 👐 
+
+--
+
+.big-par[Vamos a crear un RMarkdown en distintos formatos.]
+
+--
+
+.medium-par[html]
+
+--
+
+.medium-par[html-presentación]
+
+--
+
+.medium-par[PDF]
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Rmarkdown
+
+## Configuración de los chunks
+
+--
+&lt;br/&gt;
+
+Los chunks tienen muchos argumentos que permiten moldear el output a lo que deseamos.
+
+--
+
+Existe un chunk llamado por defecto "setup".
+
+--
+
+.discussion[
+{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+]
+
+--
+
+A través de este chunk es posible setear la configuración por defecto.
+
+--
+
+Esto lo hacemos cuando vamos a utilizar mucho alguna configuración, .pur[para no repetirla en cada chunk].
+
+--
+
+Los mismos argumentos se pueden utilizar para ajustar cualquier chunk.
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Rmarkdown
+
+--
+
+## Principales argumentos de los chunks
+
+--
+
+- include = FALSE/TRUE
+
+--
+
+- echo = FALSE/TRUE
+
+--
+
+- message = FALSE/TRUE
+
+--
+
+- warning = FALSE/TRUE
+
+--
+
+- error = FALSE/TRUE
+
+--
+
+**nota:** el shortcut para generar chunks en RMarkdown es .medium-par[.pur[Ctrl+Alt+i]]
+
+--
+
+Este shortcut realmente ahorra muuuchos pasos.
+
+--
+
+Revisemos esta guía de funcionalidades de [RMarkdown](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.232725209.739649860.1603251660-1579346009.1585862093)
+
+--
+
+Ahora echemos un vistazo a un ejemplo más elaborado 👀.
+
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Rmarkdown
+
+--
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+
+.center[.big-par[Ya tienen algunas herramientas para hacer su tarea en RMarkdown ⚒️]]
+
+--
+
+.center[.medium-par[.pur[La mejor manera de aprender es probando]]]
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Trabajo final del curso 👩‍🎓👨‍🎓
+
+--
+
+## Instrucciones generales
+
+--
+
+Vamos a trabajar con la base **Nacimientos_2017.RData**, donde cada registro corresponde a un nacimiento ocurrido durante el año 2017.
+
+--
+
+Adicionalmente, se subió una base **nacimientos_2017 (mini).RData** que contiene aproximadamente un 10% de los registros, .pur[para que la usen como alternativa a la base **Nacimientos_2017.RData** quienes consideren que su computador tiene poca capacidad de procesamiento].
+
+--
+
+Pueden descargar las bases de datos en un archivo comprimido [pinchando aquí](https://inechile.sharepoint.com/sites/CapacitacinRINE-GeneracinI/Documentos%20compartidos/Generaci%C3%B3n%20I/Trabajo%20final/data/Bases%20trabajo%20final.zip).
+
+--
+
+**Importante:** La tarea puede ser desarrollada en grupos y debe ser entregada en .pur[Rmarkdown] (**última clase**)
+
+--
+
+**Entrega: hasta 28 de octubre del 2020 - 23:59**
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Trabajo final del curso 👩‍🎓👨‍🎓
+
+--
+
+## Ejercicios:
+
+--
+
+(1). Carga las bases **Nacimientos_2017.RData** y **Proyecciones.RData** (**1 punto**).
+
+--
+
+(2). En la base de nacimientos, realice las siguientes tareas (**4 puntos**):
+
+- Renombra todas las variables a minúscula.
+- A partir de la variable **comuna** crea la variable **region**.
+- **nota:** La variable **comuna**, corresponde a una codificación que incluye el código de la región, el código de la provincia y el código de la comuna. El largo de la variable es 5 cuando el código de la región es de dos dígitos, y es 4 cuando el código de la región es de un dígito.
+- Crea la fecha de nacimiento (**fecha_nac**) a partir de las variables **dia_nac**, **mes_nac** y **ano_nac**. 
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Trabajo final del curso 👩‍🎓👨‍🎓
+
+--
+
+- Crea la fecha de inscripción (**fecha_inc**) a partir de las variables **dia_inc**, **mes_inc** y **ano_inc**.
+- Calcula la diferencia, medida en días, entre la fecha de inscripción (**fecha_inc**) y la fecha de nacimiento (**fecha_nac**).
+- Crea la variable "**tramo_edad_madre**", a partir de la variable **edad_m**:
+        - Menores de 15 años
+        - 15 a 19 años
+        - 20 a 24 años
+        - 25 a 29 años
+        - 30 a 34 años
+        - 35 a 39 años
+        - 40 a 44 años
+        - 45 a 49 años
+        - 50 años y más (no incluir 99)
+        - No especificado (edad_m == 99)
+
+--
+
+(3). En la base de proyecciones, realiza las siguientes tareas (**2 puntos**):
+  
+- Renombra todas las variables a minúscula.
+- En los nombres de las variables, reemplaza los espacios en blanco (" ") por un ("_").
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Trabajo final del curso 👩‍🎓👨‍🎓
+
+--
+
+(4). A partir de la base de **nacimientos**, calcula el número de nacimientos por **region**, guárdalo en un objeto llamado **nac_region** e imprímelo (**1 punto**).
+
+--
+
+(5). A partir de la base de **proyecciones**, calcula el total de la variable **poblacion_2017** por región, guárdalo en un objeto llamado **proy_2017** e imprímelo (**1 punto**).
+
+--
+
+(6). Une las bases **nac_region** y **proy_2017**, calcula la tasa bruta de natalidad (por 1.000 habitantes) por region `\(\frac{NacimientosEn La Región}{Proyección De Población En La Región}*1000\)` e imprime el resultado. Para unir las bases, puedes utilizar `left_join()` (**3 puntos**). 
+
+- **nota:** La tasa bruta de natalidad no necesariamente deberá coincidir con la publicada, pues el dato publicado se calcula *con  nacidos vivos corregidos, de acuerdo con el método: “Estimación del registro tardío de nacimientos”*.
+
+--
+
+(7). A partir de la base de **nacimientos**, calcula el número de nacimientos por **tramo_edad_madre** (la variable que ya creaste) e imprime la tabla resultante (**1 punto**).
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Trabajo final del curso 👩‍🎓👨‍🎓
+
+
+--
+
+(8). Crea un objeto llamado **validacion** (utilizar el paquete `validate`), que incluya las siguientes reglas (**3 puntos**):
+
+- Si la variable **categ_m** == 0, la variable **ocupa_m** debe tener un valor entre 2, 3, 4, 5, 6, 8 o x.
+- Si la variable **categ_m** == 1, la variable **ocupa_m** solo debe tener valor 1.
+- Si la variable **categ_m** == 2, la variable **ocupa_m** puede tener valor entre 0 y 8, o x.
+- Si la variable **categ_m** == 3, la variable **ocupa_m** solo puede tener valor entre 5 y 9, o x.
+- Si la variable **categ_m** == 4, la variable **ocupa_m** solo puede tener valor entre 2 y 3, 5 y 9, o x.
+- Si la variable **categ_m** == 9, la variable **ocupa_m** solo puede tener valor x.
+	  
+--
+
+(9). A partir del objeto **validacion**, identifica el número de **fails** en la base. A partir de este número, identifica la causa de los errores (en caso de existir), y escribe la razón de los errores (**2 puntos**).
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Trabajo final del curso 👩‍🎓👨‍🎓
+
+--
+
+(10). Tanto para la madre como para el padre, genera un gráfico boxplot que muestre la edad (eje y) y el grupo ocupacional, variable **ocupa_p** y **ocupa_m**, respectivamente (eje x). Utiliza el paquete `ggplot2`, la función `ggplot()` y considera el tipo de gráfico `geom_boxplot`. Para la generación de cada uno de estos gráficos sigue los siguientes pasos (estos pasos se explicarán con la madre, pero para los padres el proceso es análogo) (**4 puntos**):  
+- Utiliza la base de **nacimientos**.
+- Filtra la base de forma tal de no considerar los casos donde la variable **edad_m** sea igual a 99.
+- Filtra la base de forma tal de solo quedar con los registros donde la variable **activ_m** sea igual a 1.
+- Grafica lo solicitado.
+
+--
+
+(11). Consulta la base de datos de **nacimientos** y responde las siguientes preguntas (**2 puntos**):
+- ¿En qué grupo ocupacional se encuentra el promedio más alto de la edad de la madre?, ¿en cuál grupo el promedio más bajo?
+- ¿En qué grupo ocupacional se encuentra el promedio más alto de la edad del padre?, ¿en cuál grupo el promedio más bajo?
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Trabajo final del curso 👩‍🎓👨‍🎓
+
+--
+
+Pista ejercicio 10: así se ven los gráficos para la ocupación de la madre (ocupa_m) y la del padre (ocupa_p).
+
+**nota:** los graficos se generaron con la base **Nacimientos_2017** completa, no con la **Nacimientos_2017 (mini)**.
+
+--
+
+.pull-left[![](imagenes/Boxplot_m.png)]
+
+--
+
+.pull-left[![](imagenes/Boxplot_h.png)]
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Referencias
+
+.medium-par[Nada de esto sería posible sin:]
+
+- [Presentación de Daniela Ballari en LatinR 2020 ](https://www.youtube.com/watch?v=Hvrb2b7v93w)
+
+- [Guía para la reproducibilidad en investigación - The Turing Project](https://the-turing-way.netlify.app/welcome.html)
+
+- [Xaringan: Presentation Ninja, de Yihui Xie](https://github.com/yihui/xaringan). Para generar esta presentación con la plantilla ninja ⚔
+
+- [R for Data Science, de Hadley Wickham, capítulo 14](https://r4ds.had.co.nz/)
+
+- [Advanced R, de Hadley Wickham](http://adv-r.had.co.nz/Introduction.html)
+
+- [Introduction to R, de Data Carpentry](https://datacarpentry.org/R-genomics/01-intro-to-R.html#functions)
+
+
+.medium-par[R for Data Science tiene una traducción al español realizada por la comunidad hispana de R:]
+
+- [R para ciencia de datos, de Hadley Wickham, capítulo 14](https://es.r4ds.hadley.nz/)
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Otras referencias
+
+--
+
+## Para inspirarnos
+
+--
+
+### Ejemplos de documentos usando `R Markdown`
+
+`R Markdown` puede generar archivos como páginas web, documentos en Word o PDF, tableros dinámico (*dashboard*),  presentaciones en HTML y otros formatos.
+
+- [Link para curiosear](https://rmarkdown.rstudio.com/gallery.html)
+
+- [Más links para curiosear](https://bookdown.org/yihui/rmarkdown/basics-examples.html)
+
+### Guías de referencia
+
+- [`R Markdown`: *The Definitive Guide*](https://bookdown.org/yihui/rmarkdown/)
+
+- [`R Markdown` *Cheatsheet*](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+
+- [Resumen de R funcionalidades de R Markdown](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+
+- Por si alguien quiere hacer una tesis: [*Writing your dissertation (or Thesis) in* `R Markdown`](https://tysonbarrett.com//jekyll/update/2018/02/11/r_dissertation/)
+
+---
+
+class: center, middle
+
+.linea-superior[]
+.linea-inferior[]
+
+
+&lt;img src="imagenes/logo_portada2.png" width="200" /&gt;
+
+
+## Capacitación en R y herramientas de productividad
+
+## Proyecto Estratégico Servicios Compartidos para la Producción Estadística
+
+## Introducción a RMarkdown
+
+### Octubre 2020
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
