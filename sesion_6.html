@@ -1,18 +1,15 @@
----
-title: "Capacitación en R y herramientas de productividad"
-subtitle: "Sesión 7"  
-author: 
-date: '`r Sys.Date()`'
-output:
-  xaringan::moon_reader:
-    seal: false
-    #lib_dir: libs
-    css: xaringan-themer.css
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: False
----
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Capacitación en R y herramientas de productividad</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="" />
+    <meta name="date" content="2020-11-25" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
 
 class: center, middle
 
@@ -20,7 +17,7 @@ class: center, middle
 .linea-inferior[]
 
 
-<img src="imagenes/logo_portada2.png" width="200" />
+&lt;img src="imagenes/logo_portada2.png" width="200" /&gt;
 
 
 ## Capacitación en R y herramientas de productividad
@@ -31,14 +28,9 @@ class: center, middle
 
 ### Noviembre 2020
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = TRUE)
-knitr::opts_chunk$set(message = FALSE) 
-```
 
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-library(xaringanthemer)
-```
+
+
 
 ---
 
@@ -49,29 +41,29 @@ background-position: 100% 0%
 # Sesión 6: Introducción a RMarkdown
 
 --
-<br/>
+&lt;br/&gt;
 
 .medium-par[Importancia de la reproducibilidad 🤖]
-<br/>
-<br/>
+&lt;br/&gt;
+&lt;br/&gt;
 
 --
 
 .medium-par[¿Qué es RMarkdown?]
-<br/>
-<br/>
+&lt;br/&gt;
+&lt;br/&gt;
 
 --
 
 .medium-par[Tipos de formatos de salida]
-<br/>
-<br/>
+&lt;br/&gt;
+&lt;br/&gt;
 
 --
 
 .medium-par[Creando mi primer reporte con RMarkdown]
-<br/>
-<br/>
+&lt;br/&gt;
+&lt;br/&gt;
 
 ---
 
@@ -87,7 +79,7 @@ background-position: 100% 0%
 # Importancia de la reproducibilidad
 
 --
-<br/>
+&lt;br/&gt;
 
 .center[.medium-par[¿Han escuchado el concepto de .pur[reproducibilidad]?🤔]]
 
@@ -112,21 +104,21 @@ background-position: 100% 0%
 # Importancia de la reproducibilidad
 
 --
-<br/>
+&lt;br/&gt;
 
 Que otra persona (o mi yo del futuro) pueda ejecutar mi .pur[código] con .pur[los mismos datos] llegando **al mismo resultado**.
 
 --
-<br/>
-<br/>
+&lt;br/&gt;
+&lt;br/&gt;
 
 .center[.big-par[**¿Qué puede salir mal?** ⚰️]]
 
 --
-<br/>
+&lt;br/&gt;
 
 .center[
-<img src= "https://media1.giphy.com/media/jM6JLt7xHkZxaeHwhG/200w.webp?cid=ecf05e478x4ytanztrx22si2y7ibrgekn371tgscimf4bemf&rid=200w.webp" width="400"/>
+&lt;img src= "https://media1.giphy.com/media/jM6JLt7xHkZxaeHwhG/200w.webp?cid=ecf05e478x4ytanztrx22si2y7ibrgekn371tgscimf4bemf&amp;rid=200w.webp" width="400"/&gt;
 ]
 
 ---
@@ -138,15 +130,15 @@ background-position: 100% 0%
 # Importancia de la reproducibilidad
 
 --
-<br/>
-<br/>
+&lt;br/&gt;
+&lt;br/&gt;
 
 
 .pull-left[
-<br/>
-<br/>
+&lt;br/&gt;
+&lt;br/&gt;
 
-<img src = "https://media4.giphy.com/media/Q6rHMQaNbqsqBd8pVb/200w.webp?cid=ecf05e47coe8546mt2qzg63trkm1qmlbgzgt5kt10krdzvv5&rid=200w.webp" width="400" />]
+&lt;img src = "https://media4.giphy.com/media/Q6rHMQaNbqsqBd8pVb/200w.webp?cid=ecf05e47coe8546mt2qzg63trkm1qmlbgzgt5kt10krdzvv5&amp;rid=200w.webp" width="400" /&gt;]
 
 --
 
@@ -182,27 +174,27 @@ background-position: 100% 0%
 
 --
 
-No sé si estoy usando los mismos datos  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 👉 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .medium-par[.pur[script]]
+No sé si estoy usando los mismos datos  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 👉 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; .medium-par[.pur[script]]
 
 --
 
-Rutas a archivos que son incorrectas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   👉 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  .medium-par[.pur[script]]
+Rutas a archivos que son incorrectas &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;   👉 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  .medium-par[.pur[script]]
 
 --
 
-Aleatoriedad no reproducible  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  👉  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  .medium-par[.pur[set.seed()]], entre otros 
+Aleatoriedad no reproducible  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  👉  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  .medium-par[.pur[set.seed()]], entre otros 
 
 --
 
-Comentarios escuetos en el código  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   👉  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  .medium-par[.pur[🧐 (estilo de código)]]
+Comentarios escuetos en el código  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;   👉  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  .medium-par[.pur[🧐 (estilo de código)]]
 
 --
 
-Variables no localizadas (no creadas en la rutina) &nbsp;&nbsp;&nbsp;&nbsp;   👉 &nbsp;&nbsp;&nbsp;&nbsp;  .medium-par[.pur[RMarkdown]]
+Variables no localizadas (no creadas en la rutina) &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;   👉 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  .medium-par[.pur[RMarkdown]]
 
 --
 
-Diferentes versiones del *software* o de los paquetes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  👉  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .medium-par[.pur[🐳]]
+Diferentes versiones del *software* o de los paquetes &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  👉  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; .medium-par[.pur[🐳]]
 
 --
 
@@ -218,13 +210,13 @@ background-position: 100% 0%
 # Importancia de la reproducibilidad
 
 --
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
 
-<img src =https://www.researchgate.net/profile/Arthur_Piazzi/publication/325910795/figure/fig2/AS:640119719620611@1529627842920/Reproducibility-Spectrum.png width="800"/>
+&lt;img src =https://www.researchgate.net/profile/Arthur_Piazzi/publication/325910795/figure/fig2/AS:640119719620611@1529627842920/Reproducibility-Spectrum.png width="800"/&gt;
 
 ---
 
@@ -344,7 +336,7 @@ background-position: 100% 0%
 
 --
 
-`R Markdown` ofrece muchas posibilidades. Veremos mayormente cómo crear documentos en formato .pdf usando `R Markdown`, donde se puede incrustar código en $\LaTeX$.
+`R Markdown` ofrece muchas posibilidades. Veremos mayormente cómo crear documentos en formato .pdf usando `R Markdown`, donde se puede incrustar código en `\(\LaTeX\)`.
 
 --
 
@@ -356,15 +348,15 @@ Y generalmente hay que **estudiar** un poco con google para que nuestros documen
 
 --
 
-$\LaTeX$ es un sistema de composición de textos orientado a la creación de documentos científicos.
+`\(\LaTeX\)` es un sistema de composición de textos orientado a la creación de documentos científicos.
 
 --
 
-$\LaTeX$ es muy útil para escribir textos que incluyen notación matemática.
+`\(\LaTeX\)` es muy útil para escribir textos que incluyen notación matemática.
 
 --
 
-`R Markdown` cuenta con varias herramientas que nos permiten eximirnos un poco del conocimiento de $\LaTeX$ ⏩⏩⏩
+`R Markdown` cuenta con varias herramientas que nos permiten eximirnos un poco del conocimiento de `\(\LaTeX\)` ⏩⏩⏩
 
 ---
 
@@ -401,7 +393,7 @@ background-position: 100% 0%
 ## Configuración de los chunks
 
 --
-<br/>
+&lt;br/&gt;
 
 Los chunks tienen muchos argumentos que permiten moldear el output a lo que deseamos.
 
@@ -520,9 +512,9 @@ background-position: 100% 0%
 # Rmarkdown
 
 --
-<br/>
-<br/>
-<br/>
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
 
 .center[.big-par[Ya tienen algunas herramientas para hacer su tarea en RMarkdown ⚒️]]
 
@@ -597,7 +589,7 @@ class: center, middle
 .linea-inferior[]
 
 
-<img src="imagenes/logo_portada2.png" width="200" />
+&lt;img src="imagenes/logo_portada2.png" width="200" /&gt;
 
 
 ## Capacitación en R y herramientas de productividad
@@ -607,3 +599,126 @@ class: center, middle
 ## Introducción a RMarkdown
 
 ### Noviembre 2020
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
