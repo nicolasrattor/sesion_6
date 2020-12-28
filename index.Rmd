@@ -199,7 +199,7 @@ No sé si estoy usando los mismos datos  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; �
 
 --
 
-Rutas a archivos que son incorrectas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   👉 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  .medium-par[.pur[script]]
+Rutas a archivos que son incorrectas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   👉 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  .medium-par[.pur[script y protocolo IPO]]
 
 --
 
@@ -220,6 +220,53 @@ Diferentes versiones del *software* o de los paquetes &nbsp;&nbsp;&nbsp;&nbsp;&n
 --
 
 .center[.medium.par[De todas maneras, salvo el último punto, todo esto y más podría solucionarse usando .pur[RMarkdown]]]
+
+
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Importancia de la reproducibilidad 
+
+--
+
+.medium-par[De Daniela Ballari, en LatinR].
+
+--
+
++ Recordar como se hizo lo que se hizo (yo del futuro y supervisión)
+
+--
+
++ Facilita la detección de errores antes de publicar (si el código no corre es porque hay problemas)
+
+--
+
++ Permite el control de versiones (volver al pasado)
+
+--
+
++ Facilita la continuación del trabajo ante el recambio de personal
+
+--
+
++ Permite la colaboración y transparencia del proyecto
+
+--
+
++ Credibilidad de lo realizado
+
+--
+
++ Evita malos entendidos, confusiones frente a revisión o solicitudes innecesarias (cualquier duda consulta el código)
+
+--
+
++ Código puede reutilizarse o complejizarse para mejorar un procedimiento o una investigación
+
 
 
 ---
@@ -562,6 +609,8 @@ background-position: 100% 0%
 - [Documental sobre Aaron Swartz](https://www.youtube.com/watch?v=VBkD04z-8V8) (1986-2013), activista y hacker, involucrado en el desarrollo del lenguaje Markdown, Creative Commons, Open Library y Reddit.
 
 - [Rodríguez-Sánchez en #LatinR2020. Como escribir manuscritos reproducibles](https://www.youtube.com/watch?v=TKhV3w467RI&t=202s)
+
+- [Ballari en #LatinR2020. ¿Por qué es importante la reproducibilidad computacional?](https://www.youtube.com/watch?v=Hvrb2b7v93w)
 
 - [Healey, K. Guía de texto simple para personas simples en ciencias sociales](https://kieranhealy.org/files/papers/plain-person-text.pdf)
 
