@@ -1,6 +1,6 @@
 ---
-title: "Capacitación en R y herramientas de productividad"
-subtitle: "Sesión 7"  
+title: "Capacitación en R"
+subtitle: "Sesión 6"  
 author: 
 date: '`r Sys.Date()`'
 output:
@@ -23,13 +23,11 @@ class: center, middle
 <img src="imagenes/logo_portada2.png" width="200" />
 
 
-## Capacitación en R y herramientas de productividad
-
-## Proyecto Estratégico Servicios Compartidos para la Producción Estadística
+## Capacitación en R
 
 ## Introducción a Rmarkdown
 
-### Noviembre 2020
+### Enero 2021
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = TRUE)
@@ -117,6 +115,21 @@ background-position: 100% 0%
 Que otra persona (o mi yo del futuro) pueda ejecutar mi .pur[código] con .pur[los mismos datos] llegando **al mismo resultado**.
 
 --
+
+![](imagenes/reproducible_turing_way.PNG)
+
+
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# Importancia de la reproducibilidad
+
+--
+
 <br/>
 <br/>
 
@@ -339,12 +352,12 @@ background-position: 100% 0%
 ## Cómo funciona
 
 .middle[
-![](https://d33wubrfki0l68.cloudfront.net/61d189fd9cdf955058415d3e1b28dd60e1bd7c9b/b739c/lesson-images/rmarkdownflow.png)
+![](imagenes/plain-person-text.PNG)
 ]
 
 --
 
-`R Markdown` ofrece muchas posibilidades. Veremos mayormente cómo crear documentos en formato .pdf usando `R Markdown`, donde se puede incrustar código en $\LaTeX$.
+`R Markdown` ofrece muchas posibilidades. Veremos mayormente cómo crear documentos en formato .pdf usando `R Markdown`.
 
 --
 
@@ -352,19 +365,7 @@ Una de las principales **desventajas** de RMarkdown es que toma bastante **tiemp
 
 --
 
-Y generalmente hay que **estudiar** un poco con google para que nuestros documentos resulten tal y como los imaginamos.
-
---
-
-$\LaTeX$ es un sistema de composición de textos orientado a la creación de documentos científicos.
-
---
-
-$\LaTeX$ es muy útil para escribir textos que incluyen notación matemática.
-
---
-
-`R Markdown` cuenta con varias herramientas que nos permiten eximirnos un poco del conocimiento de $\LaTeX$ ⏩⏩⏩
+Y generalmente hay que **estudiar** un poco con google...
 
 ---
 
@@ -389,6 +390,10 @@ background-position: 100% 0%
 --
 
 .medium-par[PDF]
+
+--
+
+.medium-par[WORD]
 
 ---
 
@@ -507,28 +512,7 @@ background-position: 100% 0%
     - Cada chunk puede tener o no tener un nombre. Si los deciden nombrar, 
       los nombres NO DEBEN REPETIRSE (**error habitual**).
 
---
 
-Ahora echemos un vistazo a ejemplos más elaborados 👀.
-
----
-
-background-image: url("imagenes/fondo2.PNG")
-background-size: contain;
-background-position: 100% 0%
-
-# Rmarkdown
-
---
-<br/>
-<br/>
-<br/>
-
-.center[.big-par[Ya tienen algunas herramientas para hacer su tarea en RMarkdown ⚒️]]
-
---
-
-.center[.medium-par[.pur[La mejor manera de aprender es probando]]]
 
 ---
 
@@ -567,27 +551,25 @@ background-position: 100% 0%
 
 --
 
-## Para inspirarnos
+## Para inspirarnos y seguir aprendiendo
 
 --
 
-### Ejemplos de documentos usando `R Markdown`
+- [Curso Ciencia Social Abierta](https://cienciasocialabierta.netlify.app/)
 
-`R Markdown` puede generar archivos como páginas web, documentos en Word o PDF, tableros dinámico (*dashboard*),  presentaciones en HTML y otros formatos.
+- [Ejemplos de documentos en pdf, html, word, entre otros](https://rmarkdown.rstudio.com/gallery.html)
 
-- [Link para curiosear](https://rmarkdown.rstudio.com/gallery.html)
+- [Documental sobre Aaron Swartz](https://www.youtube.com/watch?v=VBkD04z-8V8) (1986-2013), activista y hacker, involucrado en el desarrollo del lenguaje Markdown, Creative Commons, Open Library y Reddit.
 
-- [Más links para curiosear](https://bookdown.org/yihui/rmarkdown/basics-examples.html)
+- [Rodríguez-Sánchez en #LatinR2020. Como escribir manuscritos reproducibles](https://www.youtube.com/watch?v=TKhV3w467RI&t=202s)
 
-### Guías de referencia
+- [Healey, K. Guía de texto simple para personas simples en ciencias sociales](https://kieranhealy.org/files/papers/plain-person-text.pdf)
 
-- [`R Markdown`: *The Definitive Guide*](https://bookdown.org/yihui/rmarkdown/)
+- [Yihui. `R Markdown`: *The Definitive Guide*](https://bookdown.org/yihui/rmarkdown/)
 
 - [`R Markdown` *Cheatsheet*](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 
-- [Resumen de R funcionalidades de R Markdown](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
-
-- Por si alguien quiere hacer una tesis: [*Writing your dissertation (or Thesis) in* `R Markdown`](https://tysonbarrett.com//jekyll/update/2018/02/11/r_dissertation/)
+- [The Turing Way](https://the-turing-way.netlify.app/welcome.html)
 
 ---
 
@@ -600,10 +582,8 @@ class: center, middle
 <img src="imagenes/logo_portada2.png" width="200" />
 
 
-## Capacitación en R y herramientas de productividad
+## Capacitación en R
 
-## Proyecto Estratégico Servicios Compartidos para la Producción Estadística
+## Introducción a Rmarkdown
 
-## Introducción a RMarkdown
-
-### Noviembre 2020
+### Enero 2021
