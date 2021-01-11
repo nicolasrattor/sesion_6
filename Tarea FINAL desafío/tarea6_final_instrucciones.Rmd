@@ -18,7 +18,7 @@ Automatizar en lenguaje R algún procesamiento o análisis realizado periódicam
 
 ## Indicaciones generales
 
-Esta última tarea de la capacitación en R consiste en un "desafío", en donde cada compañero/a debe "automatizar", pasando a lenguaje R o RMarkdown, algún proceso o análisis que habitualmente hace en otro software como excel o spss, como labor habitual dentro de su trabajados desempeñados en el INE. La idea es volver más eficiente un proceso, reduciendo sus tiempos de ejecución, disminuyendo sus posibles fuentes de error y volviéndolo reproducible. Se espera que el código que elaboren, al mediano y largo plazo, les simplifique la vida. 
+Esta última tarea de la capacitación en R consiste en un "desafío", en donde cada compañero/a debe "automatizar", pasando a lenguaje R o RMarkdown, algún proceso o análisis que habitualmente hace en otro software como Excel o SPSS. La idea es volver más eficiente un proceso, reduciendo sus tiempos de ejecución, disminuyendo sus posibles fuentes de error y volviéndolo reproducible. Se espera que el código que elaboren, al mediano y largo plazo, les simplifique la vida. 
 
 Se recomienda trabajar con Rproject, con directorios relativos, con Rmarkdown y con un sistema de carpetas ordenado según el [protocolo IPO](https://capacitacionesdet.github.io/sesion_2/#9).
 
@@ -38,7 +38,7 @@ Al interior de la institución ya se han hecho esfuerzos en esta línea:
 
 ## Apoyo en el desafío
 
-Antes de comenzar a elaborar el ejercicio evaluar su pertinencia y factibilidad con los capacitadores. Si gusta, puede enviar una pequeña propuesta de lo que realizará entre el 12 y el 18 de enero de 2021, para que esta sea visada por el equipo. 
+Antes de comenzar a elaborar el ejercicio, evaluar su pertinencia y factibilidad con los capacitadores. Si gusta, puede enviar una pequeña propuesta de lo que realizará entre el 12 y el 18 de enero de 2021, para que esta sea visada por el equipo. 
 
 Para el desarrollo de los ejercicios se pueden consultar las presentaciones vistas en clases en la página web del curso [https://capacitacionesdet.github.io/](https://capacitacionesdet.github.io/), así como cualquier otro material de internet que resulte pertinente. Particularmente útil y novedoso puede resultar el material complementario ["Exportar archivos desde R a Excel"](https://capacitacionesdet.github.io/bonus1_openxlsx/#1).
 
@@ -49,7 +49,7 @@ Cualquier duda o problema no dude en contactar al equipo a cargo de las capacita
 
 Quien entregue el ejercicio antes de la fecha límite (15 de febrero) y, este sea evaluado positivamente por el equipo capacitador, obtendrá una nota de mérito que acreditará el haber sido capacitado en R, el haber cumplido con todas las tareas y ejercicios planificados, y el haber innovado en el desarrollo de sus labores. 
 
-Enviar ejercicio final como archivo comprimido, con nombre y apellido de quien hizo la tarea, a los correos `nicolas.ratto@ine.cl` y `gonzalo.franetovic@ine.cl`. Si la carpeta pesa mucho se puede compartir mediante onedrive, dándo acceso a los correos mencionados. La carpeta del ejercicio final debe tener a lo menos un archivo .R o .RMD con la explicación general del proceso y el código que lo hace posible. 
+Enviar ejercicio final como archivo comprimido, con nombre y apellido de quien hizo la tarea, a los correos `nicolas.ratto@ine.cl` y `gonzalo.franetovic@ine.cl`. Si la carpeta pesa mucho se puede compartir mediante onedrive, dándo acceso a los correos mencionados. La carpeta del ejercicio final debe tener a lo menos un archivo .R o .Rmd con la explicación general del proceso y el código que lo hace posible. 
 
 
 

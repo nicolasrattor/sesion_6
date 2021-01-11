@@ -1,0 +1,153 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Ejercicio final. Desafío optativo.},
+  pdfauthor={Capacitaciones R en DET},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage[fontsize=12pt]{scrextend}
+
+\title{Ejercicio final. Desafío optativo.}
+\author{Capacitaciones R en DET}
+\date{12-01-2020}
+
+\begin{document}
+\maketitle
+
+\hypertarget{objetivo}{%
+\subsection{Objetivo}\label{objetivo}}
+
+Automatizar en lenguaje R algún procesamiento o análisis realizado
+periódicamente al interior de la institución.
+
+\hypertarget{indicaciones-generales}{%
+\subsection{Indicaciones generales}\label{indicaciones-generales}}
+
+Esta última tarea de la capacitación en R consiste en un ``desafío'', en
+donde cada compañero/a debe ``automatizar'', pasando a lenguaje R o
+RMarkdown, algún proceso o análisis que habitualmente hace en otro
+software como Excel o SPSS. La idea es volver más eficiente un proceso,
+reduciendo sus tiempos de ejecución, disminuyendo sus posibles fuentes
+de error y volviéndolo reproducible. Se espera que el código que
+elaboren, al mediano y largo plazo, les simplifique la vida.
+
+Se recomienda trabajar con Rproject, con directorios relativos, con
+Rmarkdown y con un sistema de carpetas ordenado según el
+\href{https://capacitacionesdet.github.io/sesion_2/\#9}{protocolo IPO}.
+
+\hypertarget{ejemplos-e-ideas}{%
+\subsection{Ejemplos e ideas}\label{ejemplos-e-ideas}}
+
+Los procesos a automatizar pueden ir desde la construcción de tabulados
+hasta la elaboración de boletínes internos o externos, pasando por
+aplicaciones de validadores, auditorías, lecturas de coyuntuas y otros
+reportes. Básicamente todas las tareas que realizamos habitualmente en
+la institución pueden ser formalizadas y traspasadas a lenguaje R.
+
+Al interior de la institución ya se han hecho esfuerzos en esta línea:
+
+\begin{itemize}
+\item
+  Aplicación de validadores en Encuesta Mensual IR-ICMO, que crea
+  automáticamente archivos Excel para auditar manualmente.
+\item
+  Elaboración de presentaciones de lecturas de coyunturas internas.
+\item
+  Automatización de boletines regionales, nacionales y complementarios
+  (Boletín COVID-19 Módulo IR-ICMO, por ejemplo).
+\end{itemize}
+
+\hypertarget{apoyo-en-el-desafuxedo}{%
+\subsection{Apoyo en el desafío}\label{apoyo-en-el-desafuxedo}}
+
+Antes de comenzar a elaborar el ejercicio, evaluar su pertinencia y
+factibilidad con los capacitadores. Si gusta, puede enviar una pequeña
+propuesta de lo que realizará entre el 12 y el 18 de enero de 2021, para
+que esta sea visada por el equipo.
+
+Para el desarrollo de los ejercicios se pueden consultar las
+presentaciones vistas en clases en la página web del curso
+\url{https://capacitacionesdet.github.io/}, así como cualquier otro
+material de internet que resulte pertinente. Particularmente útil y
+novedoso puede resultar el material complementario
+\href{https://capacitacionesdet.github.io/bonus1_openxlsx/\#1}{``Exportar
+archivos desde R a Excel''}.
+
+Cualquier duda o problema no dude en contactar al equipo a cargo de las
+capacitaciones. En esta línea, los días martes 19 de enero, 26 de enero
+y 02 de febrero se reservará el bloque 09:30 - 11:00 como espacio de
+consultas, en el cuál se podrán revisar avances mediante videollamada en
+teams.
+
+\hypertarget{evaluaciuxf3n-y-nota-de-muxe9rito}{%
+\subsection{Evaluación y nota de
+mérito}\label{evaluaciuxf3n-y-nota-de-muxe9rito}}
+
+Quien entregue el ejercicio antes de la fecha límite (15 de febrero) y,
+este sea evaluado positivamente por el equipo capacitador, obtendrá una
+nota de mérito que acreditará el haber sido capacitado en R, el haber
+cumplido con todas las tareas y ejercicios planificados, y el haber
+innovado en el desarrollo de sus labores.
+
+Enviar ejercicio final como archivo comprimido, con nombre y apellido de
+quien hizo la tarea, a los correos \texttt{nicolas.ratto@ine.cl} y
+\texttt{gonzalo.franetovic@ine.cl}. Si la carpeta pesa mucho se puede
+compartir mediante onedrive, dándo acceso a los correos mencionados. La
+carpeta del ejercicio final debe tener a lo menos un archivo .R o .Rmd
+con la explicación general del proceso y el código que lo hace posible.
+
+\end{document}
