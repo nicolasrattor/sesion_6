@@ -195,19 +195,19 @@ background-position: 100% 0%
 
 --
 
-No sé si estoy usando los mismos datos  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 👉 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .medium-par[.pur[script]]
+No sé si estoy usando los mismos datos  &nbsp;&nbsp;&nbsp; 👉 &nbsp;&nbsp;&nbsp; .medium-par[.pur[script]]
 
 --
 
-Rutas a archivos que son incorrectas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   👉 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  .medium-par[.pur[script y protocolo IPO]]
+Rutas a archivos que son incorrectas &nbsp;&nbsp;&nbsp;   👉 &nbsp;&nbsp;&nbsp;  .medium-par[.pur[RProject y protocolo IPO]]
 
 --
 
-Aleatoriedad no reproducible  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  👉  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  .medium-par[.pur[set.seed()]], entre otros 
+Aleatoriedad no reproducible  &nbsp;&nbsp;&nbsp;  👉  &nbsp;&nbsp;&nbsp;  .medium-par[.pur[set.seed()]], entre otros 
 
 --
 
-Comentarios escuetos en el código  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   👉  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  .medium-par[.pur[🧐 (estilo de código)]]
+Comentarios escuetos en el código  &nbsp;&nbsp;&nbsp;   👉  &nbsp;&nbsp;&nbsp;  .medium-par[.pur[🧐 (estilo de código)]]
 
 --
 
@@ -215,7 +215,7 @@ Variables no localizadas (no creadas en la rutina) &nbsp;&nbsp;&nbsp;&nbsp;   �
 
 --
 
-Diferentes versiones del *software* o de los paquetes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  👉  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .medium-par[.pur[🐳]]
+Diferentes versiones del *software* o de los paquetes &nbsp;&nbsp;&nbsp;  👉  &nbsp;&nbsp;&nbsp; .medium-par[.pur[🐳]]
 
 --
 
@@ -368,6 +368,120 @@ background-position: 100% 0%
 
 
 ![](imagenes/rmd_text.PNG)
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# R Markdown
+
+--
+
+
+(4). **Énfasis**
+
+```
+ *cursiva*   **negrita**
+ _cursiva_   __negrita__
+```
+
+--
+
+
+(5). **Encabezados**
+
+```
+# Capítulo
+
+## Subcapítulo
+
+### Subsubcapítulo
+```
+
+--
+
+
+(6). **Lista desordenada:**
+
+```
+  * Item 1
+  * Item 2
+      + Item 2a
+      + Item 2b
+```
+
+--
+
+
+(7). **Lista ordenada:**
+
+```
+  1. Item 1
+  2. Item 2
+  3. Item 3
+      + Item 3a
+      + Item 3b
+```
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# R Markdown
+
+--
+
+
+(8). **Fragmentos de código R (Chunk)**
+
+El código R será evaluado e impreso
+
+![](imagenes/r_chunk.PNG)
+
+--
+
+
+(9). **Código R en línea**
+
+![](imagenes/r_line.PNG)
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# R Markdown
+
+--
+
+
+(9). **Enlaces**
+
+Usar una dirección http simple o agregar un enlace a una frase:
+
+```
+http://ejemplo.com
+
+[frase visible](http://ejemplo.com)
+```
+
+--
+
+
+(10). **Imagenes**
+
+Imágenes en la web o archivos locales en el mismo directorio:
+
+```
+![](http://ejemplo.com/logo.png)
+
+![etiqueta opcional](figuras/img.png)
+```
 
 ---
 
@@ -602,11 +716,13 @@ background-position: 100% 0%
 
 --
 
-- [Curso Ciencia Social Abierta](https://cienciasocialabierta.netlify.app/)
+- [Curso Ciencia Social Abierta / UChile](https://cienciasocialabierta.netlify.app/)
+
+- [Curso Reproductible Research / Universidad Johns Hopkins (Coursera)](https://www.coursera.org/learn/reproducible-research)
 
 - [Ejemplos de documentos en pdf, html, word, entre otros](https://rmarkdown.rstudio.com/gallery.html)
 
-- [Documental sobre Aaron Swartz](https://www.youtube.com/watch?v=VBkD04z-8V8) (1986-2013), activista y hacker, involucrado en el desarrollo del lenguaje Markdown, Creative Commons, Open Library y Reddit.
+- [Documental sobre Aaron Swartz](https://www.youtube.com/watch?v=VBkD04z-8V8) (1986-2013), activista involucrado en el desarrollo del lenguaje Markdown, Creative Commons, Open Library y Reddit.
 
 - [Rodríguez-Sánchez en #LatinR2020. Como escribir manuscritos reproducibles](https://www.youtube.com/watch?v=TKhV3w467RI&t=202s)
 
