@@ -1,0 +1,57 @@
+---
+title: "Ejercicio final. Desafío optativo."
+author: "Capacitaciones R en DET"
+date: "12-01-2020"
+output: pdf_document
+header-includes:
+- \usepackage[fontsize=12pt]{scrextend}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Objetivo
+
+Automatizar en lenguaje R algún procesamiento o análisis realizado periódicamente al interior de la institución.
+
+
+## Indicaciones generales
+
+Esta última tarea de la capacitación en R consiste en un "desafío", en donde cada compañero/a debe "automatizar", pasando a lenguaje R o RMarkdown, algún proceso o análisis que habitualmente hace en otro software como excel o spss, como labor habitual dentro de su trabajados desempeñados en el INE. La idea es volver más eficiente un proceso, reduciendo sus tiempos de ejecución, disminuyendo sus posibles fuentes de error y volviéndolo reproducible. Se espera que el código que elaboren, al mediano y largo plazo, les simplifique la vida. 
+
+Se recomienda trabajar con Rproject, con directorios relativos, con Rmarkdown y con un sistema de carpetas ordenado según el [protocolo IPO](https://capacitacionesdet.github.io/sesion_2/#9).
+
+
+## Ejemplos e ideas
+
+Los procesos a automatizar pueden ir desde la construcción de tabulados hasta la elaboración de boletínes internos o externos, pasando por aplicaciones de validadores, auditorías, lecturas de coyuntuas y otros reportes. Básicamente todas las tareas que realizamos habitualmente en la institución pueden ser formalizadas y traspasadas a lenguaje R. 
+
+Al interior de la institución ya se han hecho esfuerzos en esta línea:
+
++ Aplicación de validadores en Encuesta Mensual IR-ICMO, que crea automáticamente archivos Excel para auditar manualmente. 
+
++ Elaboración de presentaciones de lecturas de coyunturas internas.
+
++ Automatización de boletines regionales, nacionales y complementarios (Boletín COVID-19 Módulo IR-ICMO, por ejemplo).
+
+
+## Apoyo en el desafío
+
+Antes de comenzar a elaborar el ejercicio evaluar su pertinencia y factibilidad con los capacitadores. Si gusta, puede enviar una pequeña propuesta de lo que realizará entre el 12 y el 18 de enero de 2021, para que esta sea visada por el equipo. 
+
+Para el desarrollo de los ejercicios se pueden consultar las presentaciones vistas en clases en la página web del curso [https://capacitacionesdet.github.io/](https://capacitacionesdet.github.io/), así como cualquier otro material de internet que resulte pertinente. Particularmente útil y novedoso puede resultar el material complementario ["Exportar archivos desde R a Excel"](https://capacitacionesdet.github.io/bonus1_openxlsx/#1).
+
+Cualquier duda o problema no dude en contactar al equipo a cargo de las capacitaciones. En esta línea, los días martes 19 de enero, 26 de enero y 02 de febrero se reservará el bloque 09:30 - 11:00 como espacio de consultas, en el cuál se podrán revisar avances mediante videollamada en teams. 
+
+
+## Evaluación y nota de mérito
+
+Quien entregue el ejercicio antes de la fecha límite (15 de febrero) y, este sea evaluado positivamente por el equipo capacitador, obtendrá una nota de mérito que acreditará el haber sido capacitado en R, el haber cumplido con todas las tareas y ejercicios planificados, y el haber innovado en el desarrollo de sus labores. 
+
+Enviar ejercicio final como archivo comprimido, con nombre y apellido de quien hizo la tarea, a los correos `nicolas.ratto@ine.cl` y `gonzalo.franetovic@ine.cl`. Si la carpeta pesa mucho se puede compartir mediante onedrive, dándo acceso a los correos mencionados. La carpeta del ejercicio final debe tener a lo menos un archivo .R o .RMD con la explicación general del proceso y el código que lo hace posible. 
+
+
+
+
+
